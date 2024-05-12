@@ -10,6 +10,7 @@ export function BlogCreateComp() {
 
   const onSubmitBlog = async () => {
     const token = localStorage.getItem("token");
+    if(!blog.title && !blog.content) return alert("The above fields cannot be empty!")
     try {
       const response = await axios.post(
         "https://backend.riyanahmed1703.workers.dev/api/v1/blog/add",
