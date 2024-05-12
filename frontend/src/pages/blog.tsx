@@ -35,7 +35,8 @@ export function Blog() {
         }
       );
       const sortedBlogs = response.data.blogs.sort(
-        (a:any, b:any) => new Date(b.postedAt) - new Date(a.postedAt)
+        (a: { postedAt: Date }, b: { postedAt: Date }) => new Date(b.postedAt).getTime() - new Date(a.postedAt).getTime()
+
       );
       setBlogs(sortedBlogs);
 

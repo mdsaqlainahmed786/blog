@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 interface userProps {
-    userName:string
+  userName: string | null;
 }
 function Appbar({userName}:userProps) {
     const navigate = useNavigate();
@@ -18,7 +18,7 @@ function Appbar({userName}:userProps) {
         </div>
         <div className="flex flex-row justify-center items-center">
           <div className="bg-gray-900 text-white rounded-full h-8 w-8 flex justify-center items-center">
-            {userName[0]?.toUpperCase()}
+            {userName ? userName[0]?.toUpperCase() : ""}
           </div>
           <button onClick={onLogOut} className="bg-[rgb(24,24,27)] p-2 mx-2 text-sm text-white rounded-md hover:bg-gray-950">Log out</button>
         </div>
