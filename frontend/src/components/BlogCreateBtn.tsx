@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 export function BlogCreateBtn() {
   return (
     <Link to="/createblog">
-      <div className="bg-[rgb(24,24,27)] flex justify-center items-center rounded-full w-16 h-16 cursor-pointer float-right sticky bottom-10 right-7 hover:bg-gray-950">
+      <div className="bg-[rgb(24,24,27)] flex justify-center items-center rounded-full w-16 h-16 cursor-pointer float-right fixed bottom-10 right-7 hover:bg-gray-950">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="white"
